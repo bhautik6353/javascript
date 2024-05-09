@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>--Enter any four numbers--</h1>
+
+        <br>
+
+        <label for="">Enter first number</label><br><br>
+        <input type="text" id="first"><br><br><br>
+
+        <label for="">Enter second number</label><br><br>
+        <input type="text" id="second"><br><br><br>
+
+        <label for="">Enter third number</label><br><br>
+        <input type="text" id="third"><br><br><br>
+
+        <label for="">Enter fourth number</label><br><br>
+        <input type="text" id="fourth"><br><br><br>
+
+
+
+        <h1 id="ans"></h1>
+
+    </center>
+
+    <script>
+        let a = parseFloat(document.getElementById("first").value);
+        let b = parseFloat(document.getElementById("second").value);
+        let c = parseFloat(document.getElementById("third").value);
+        let d = parseFloat(document.getElementById("fourth").value);
+
+if(a === "" && b === "" && c === "" && d === ""){
+document.getElementById("ans").innerHTML="Enter a number"
+}
+else{
+    if(a < b && a < c && a < d){
+        document.getElementById("ans").innerHTML="first value is smallest!"
+    }
+    else if(b < a && b < c && b < d){
+        document.getElementById("ans").innerHTML="second value is smallest!"
+    }
+    else if(c < a && c < b && c < d){
+        document.getElementById("ans").innerHTML="third value is smallest!"
+    }
+    else if(d < a && d < a && d < c){
+        document.getElementById("ans").innerHTML="fourth value is smallest!"
+    }
+}
+    
+        
+
+
+
+        
+    </script>
+</body>
+</html>
