@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>--Check if sum of given angles is 180 degree--</h1>
+        <h2>Enter First angle</h2>
+        <input type="text" id="s1">
+        <h2>Enter second angle</h2>
+        <input type="text" id="s2">
+        <h2>Enter third angle</h2>
+        <input type="text" id="s3">
+        <h2 id="ans1"></h2>
+        <h2 id="ans2"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let a=document.getElementById("s1").value
+    let b=document.getElementById("s2").value
+    let c=document.getElementById("s3").value
+
+    let sum= +a + +b + +c
+
+    if(a==="" && b==="" && c===""){
+        document.getElementById("ans1").innerHTML="enter angle's!"
+    }else{
+      if(sum == 180){
+        document.getElementById("ans1").innerHTML="The triangle is valid"
+
+        if(a==b && b == c && c==a){
+        document.getElementById("ans2").innerHTML="Equilateral Triangle"
+        }
+        else if(a==b || b == c || c==a){
+        document.getElementById("ans2").innerHTML="Isosceles Triangle"    
+        }
+        else{
+            document.getElementById("ans2").innerHTML="Scalene Triangle"
+        }
+      }else{
+        document.getElementById("ans1").innerHTML="The triangle is not valid"
+      }
+    }
+</script>

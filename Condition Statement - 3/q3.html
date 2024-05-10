@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>--find if its even or odd--</h1>
+        <h2>Enter a number</h2>
+        <input type="text" id="s1">
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let a=document.getElementById("s1").value
+    if(a===""){
+document.getElementById("ans").innerHTML="enter a number!"
+    }else{
+        if(a%2==0){
+            document.getElementById("ans").innerHTML="This is a even"
+        }else{
+            document.getElementById("ans").innerHTML="This is a odd"
+        }
+    }
+
+</script>
