@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><br><br><br>
+        <h1>--Simple Interest--</h1>
+        <h2>enter Principal</h2>
+        <input type="text" id="s1">
+        <h2>enter  Rate of Interest</h2>
+        <input type="text" id="s2">
+        <h2>enter Time period</h2>
+        <input type="text" id="s3">
+
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+
+<script>
+    let p=document.getElementById("s1").value
+    let r=document.getElementById("s2").value
+    let t=document.getElementById("s3").value
+    let si=(+p * +r * +t)/100
+
+    document.getElementById("ans").innerHTML=si
+
+</script>
