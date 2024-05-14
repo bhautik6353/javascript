@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1>--calculates a discount--</h1>
+        <h2>Enter Amount:</h2>
+        <input type="text" id="s1">
+        <h2 id="ans"></h2>
+        <h2 id="ans1"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let Amount=document.getElementById("s1").value
+    if(Amount===""){
+        document.getElementById("ans").innerHTML="Please Enter Amount"
+    }else{
+        if(Amount>=1 && Amount<=49){
+
+        document.getElementById("ans").innerHTML="Discount is 0%!"
+        document.getElementById("ans1").innerHTML="your purchase amount:"+Amount
+        }
+       else if(Amount>=50 && Amount<=99){
+
+document.getElementById("ans").innerHTML="Discount is 10%!"
+let sum=Amount-(Amount*(10/100))
+document.getElementById("ans1").innerHTML="your purchase amount:"+ sum
+}else{
+    document.getElementById("ans").innerHTML="Discount is 20%!"
+let sum=Amount-(Amount*(20/100))
+document.getElementById("ans1").innerHTML="your purchase amount:"+ sum
+}
+
+    }
+</script>
