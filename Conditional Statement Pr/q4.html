@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert dollars into Rupees</title>
+</head>
+<body>
+    <center><div style="height: 300px;width: 500px;border: 2px dotted ;border-radius: 20px;margin-top: 200px;">
+        <br>
+        <h1>--Convert dollars into Rupees--</h1>
+        <h2>Enter dollars:</h2>
+        <input type="text" id="s1">
+        <h2 id="ans"></h2>
+    </div>
+    </center>
+</body>
+</html>
+<script>
+    let dollars=document.getElementById("s1").value
+    let Rupees=dollars * 83.51
+    if(dollars===""){
+        document.getElementById("ans").innerHTML="Please enter a value"
+    }else{
+        document.getElementById("ans").innerHTML= dollars + " dollars is equal to " + Rupees + " Rupees"
+    }
+</script>
