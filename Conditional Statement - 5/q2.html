@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1>--Calculato--</h1>
+        <h2>Enter First Value:</h2>
+        <input type="text" id="s1">
+        <h2>Enter Oprator Sign:</h2>
+        <input type="text" id="s2">
+        <h2>Enter Second Value:</h2>
+        <input type="text" id="s3">
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let number1=document.getElementById("s1").value
+    let Oprator=document.getElementById("s2").value 
+    let number2=document.getElementById("s3").value  
+
+    if(number1==="" && Oprator==="" && number2===""){
+        document.getElementById("ans").innerHTML="Please Enter All Values"
+    }else{
+        switch(Oprator){
+            case "+":document.getElementById("ans").innerHTML="Addition is:" + (+number1 + +number2) 
+            break
+            case "-":document.getElementById("ans").innerHTML="Subtraction is:"+(+number1 - +number2) 
+            break
+            case "*":document.getElementById("ans").innerHTML="Multiplication is:"+(+number1 * +number2) 
+            break
+            case "/":document.getElementById("ans").innerHTML="Division is:"+(+number1 / +number2) 
+            break
+            default:document.getElementById("ans").innerHTML="Enter Valid Oprator!"
+
+
+        }
+    }
+</script>

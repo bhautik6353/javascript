@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><br><br><br>
+        <h1>--Day of the Week--</h1>
+        <h2>Enter Day Name:</h2>
+        <input type="text" id="s1">
+        <h2 id="ans"></h2>
+
+    </center>
+</body>
+</html>
+<script>
+    let day = document.getElementById("s1").value
+    if (day ==="") {
+        document.getElementById("ans").innerHTML = "Enter Day"
+    } else {
+        switch (day) {
+            case "monday":document.getElementById("ans").innerHTML ="It's the start of the workweek."
+            break
+            case "friday":document.getElementById("ans").innerHTML = "It's almost the weekend!"
+            break
+            default:
+            document.getElementById("ans").innerHTML="It's some other day."
+            break
+        }
+}
+
+
+</script>

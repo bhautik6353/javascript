@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1>--Traffic Light--</h1>
+        <h2>Enter Light Color</h2>
+        <input type="text" id="s1">
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+
+    let light=document.getElementById("s1").value 
+    if (light ==="") {
+        document.getElementById("ans").innerHTML = "Enter Day"
+    } else {
+        switch (light) {
+            case "red":document.getElementById("ans").innerHTML ="Stop!"
+            break
+            case "yellow":document.getElementById("ans").innerHTML = "Slow down!"
+            break
+            case "green":document.getElementById("ans").innerHTML = "Go."
+            break
+            default:
+            document.getElementById("ans").innerHTML="Invalid light color"
+            break
+        }
+    }
+</script>
