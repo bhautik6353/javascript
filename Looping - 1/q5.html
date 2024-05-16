@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Consonants</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+<h1>--Find Consonants--</h1>
+<h2>Enter string:</h2>
+<input type="text" id="s1">
+<h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    var a = document.getElementById("s1").value;
+    let s2=0
+    if(a===""){
+    document.getElementById("ans").innerHTML="Enter valid string!"
+}else{
+    for(let i=0;i<=a.length-1;i++){
+        if(a[i]=="a"||a[i]=="A"||a[i]=="e"||a[i]=="E"||a[i]=="i"||a[i]=="I"||a[i]=="o"||a[i]=="O"||a[i]=="u"||a[i]=="U"){
+      
+        }else{
+            s2+=1
+        }
+    }
+    document.getElementById("ans").innerHTML="Consonants in a string:"+ s2
+}
+</script>
