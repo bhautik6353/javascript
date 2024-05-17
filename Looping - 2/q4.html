@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body><center>
+    <br><br><br>
+    <h1>--Power of a Number--</h1>
+    <h2>Enter value:</h2>
+    <input type="text" id="s1">
+    <h2>Enter value of Exponent:</h2>
+    <input type="text" id="s2">
+    <h2 id="ans"></h2>
+</center>
+</body>
+</html>
+<script>
+
+    let base =document.getElementById("s1").value
+    let expo =document.getElementById("s2").value
+    let i =1 
+    let res =1 
+
+    if(base==="" && expo==="" && i==="" && res===""){
+document.getElementById("ans").innerHTML="Enter Value!"
+    }else{
+        do{
+        res = res * base
+        i++ 
+    }while(i<=expo)
+
+    }
+    document.getElementById("ans").innerHTML="power of a number:" + res
+
+
+</script>
