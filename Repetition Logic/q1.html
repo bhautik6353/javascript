@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+  <center>  <h4 id="ans"></h4></center>
+</body>
+</html>
+<script>
+    for(let i=1 ; i<=50 ;i++){
+        if(i%3==0 && i%5==0){
+            document.getElementById("ans").innerHTML +="FizzBuzz:"
+        }else if (i%3==0){
+            document.getElementById("ans").innerHTML +="Fizz:"
+        }else if (i%5==0 ){
+            document.getElementById("ans").innerHTML +="Buzz:"
+        }
+        document.getElementById("ans").innerHTML +=i+"<br>"
+}
+</script>
