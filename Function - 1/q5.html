@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center><br><br><br>
+        <h1>--Reverse the digits--</h1>
+        <h2>Enetr the number: </h2>
+        <input type="number" id="in1">
+
+
+        <h2 id="ans"></h2>
+    </center>
+</body>
+
+</html>
+<script>
+    reverse = () => {
+        let num =document.getElementById("in1").value 
+        let rev = 0, rem
+        while (num != 0) {
+            rem = num % 10
+            rev = rev * 10 + rem
+            num = Math.floor(num / 10)
+        }
+        document.getElementById("ans").innerHTML="Reverse the digits:" + rev
+    }
+    reverse()
+</script>

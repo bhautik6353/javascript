@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><br><br><br>
+        <h1>--Find double of a number--</h1>
+        <h2>Enetr the number: </h2>
+        <input type="number" id="in1">
+       
+
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("in1").value
+   
+
+     let ans = () =>{
+    let b=2
+    let sum=+a * +b
+    document.getElementById("ans").innerHTML="double of a number:" + sum
+    }
+    ans()
+</script>
