@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h2>Enter First Number:</h2>
+        <input type="text" id="s1">
+        <h2>Enter Second Number:</h2>
+        <input type="text" id="s2">
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let first=document.getElementById("s1").value
+    let Second=document.getElementById("s2").value 
+    function sum(a,b){
+        return +a + +b
+    }
+    document.getElementById("ans").innerHTML= "sum is:" + sum(first,Second)
+    
+</script>
