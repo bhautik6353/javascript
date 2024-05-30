@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1</title>
+</head>
+
+<body><center>
+    <br><br><br>
+    <h1>*Given an array of string generate an array whose first or last character is a*</h1><br>
+    <h2 id="ans1"></h2>
+    <h2 id="ans2"></h2>
+</center>
+
+
+</body>
+
+</html>
+<script>
+    let arr = ["assignment", "problem", "media", "upload"]
+
+    let ans = arr.filter((str) => {
+        return str[0] === "a" || str.length === "a" || str[str.length - 1] === "a"
+    })
+
+    console.log(arr)
+    console.log(ans)
+    document.getElementById("ans1").innerHTML=arr
+    document.getElementById("ans2").innerHTML=ans
+
+
+
+</script>
