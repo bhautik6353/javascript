@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        let student =[
+        {name:"bhautik",age:20,mark:55},
+        {name:"trushit",age:15,mark:45},
+        {name:"dhruv",age:17,mark:35},
+        {name:"kapil",age:14,mark:65},
+        {name:"vansh",age:16,mark:75},
+        {name:"jk",age:21,mark:70},
+    ]
+    let ans=student.filter((el)=>{
+        return el.mark > 60 && el.age > 15
+    })
+    console.log(ans)
+</script>
