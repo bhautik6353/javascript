@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+function getAffordableBooks(books, budget) {
+    // Filter the books based on price and availability
+    return books.filter(book => book.price <= budget && book.quantityAvailable > 0);
+}
+
+// Example usage:
+const books = [
+    { title: 'Book A', author: 'Author A', price: 30, quantityAvailable: 5 },
+    { title: 'Book B', author: 'Author B', price: 50, quantityAvailable: 0 },
+    { title: 'Book C', author: 'Author C', price: 70, quantityAvailable: 10 },
+    { title: 'Book D', author: 'Author D', price: 20, quantityAvailable: 2 },
+    { title: 'Book E', author: 'Author E', price: 60, quantityAvailable: 1 },
+];
+
+const budget = 60;
+const affordableBooks = getAffordableBooks(books, budget);
+
+console.log(affordableBooks);
+
+
+</script>
