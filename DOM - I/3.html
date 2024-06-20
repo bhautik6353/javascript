@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        height: 30px;
+        width: 120px;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 5px;
+        
+    }
+</style>
+<body>
+    <center>
+        <br><br>
+        <h1>--Mini Calculator--</h1>
+        <h2 id="first">Enter First Number:</h2>
+        <input type="text" id="s1">
+        <h2 id="second">Enter Second Number:</h2>
+        
+        <input type="text" id="s2">
+        <br><br>
+        <button  onclick="addition()">Addition(+)</button>
+        <button  onclick="Subtraction()">Subtraction(-)</button>
+        <button  onclick="Division()">Dvision(/)</button>
+        <button  onclick="Multiplication()">Multiplication(*)</button>
+    </center>
+</body>
+</html>
+<script>
+    function addition(){
+        let num1 = document.querySelector("#s1").value
+        let num2 = document.querySelector("#s2").value
+        let sum = +num1 + +num2 ;
+        alert(`Addition of Two elements is: ${sum}`);
+    }
+    function Subtraction(){
+        let num1 = document.querySelector("#s1").value
+        let num2 = document.querySelector("#s2").value
+        let sum = +num1 - +num2 ;
+        alert(`Substraction of Two elements is: ${sum}`);
+    }
+    function Multiplication(){
+        let num1 = document.querySelector("#s1").value
+        let num2 = document.querySelector("#s2").value
+        let sum = +num1 * +num2 ;
+        alert(`Multiply of Two elements is: ${sum}`);
+    }
+    function Division(){
+        let num1 = document.querySelector("#s1").value
+        let num2 = document.querySelector("#s2").value
+        let sum = +num1 / +num2 ;
+        alert(`Division of Two elements is: ${sum}`);
+    }
+</script>
