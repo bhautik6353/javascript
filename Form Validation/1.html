@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width: 200px;
+        height: 25px;
+        border-radius: 20px;
+        border: 1px solid;
+    }
+    #s1{
+        height: inherit;
+        width: 500px;
+        border: 1px solid;
+        margin-top: 50px;
+        border-radius: 30px;
+        background-color: white;
+    }
+    button{
+        height: 40px;
+        width: 100px;
+        border-radius: 20px;
+        border: 0px solid;
+        background-color: tomato;
+        font-weight: bolder;
+    }
+    select{
+        width: 200px;
+        height: 25px;
+        border-radius: 20px;
+        border: 1px solid;
+        background-color: white;
+    }
+</style>
+<body style="background-color: gray;"><center>
+<div id="s1">
+   <h1>--Form Validation--</h1>
+    <form id="signup" action="">
+        <label for="">Enter Your Name</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="">Enter Your Email</label><br>
+        <input type="mail" id="email"><br><br>
+        <label for="">Enter Your Password</label><br>
+        <input type="text" id="password"><br><br>
+        <label for="">Enter Your Confirom Name</label><br>
+        <input type="text" id="cp"><br><br>
+        <label for="Enter Your Hobby">Enter Your Hobby</label><br>
+        <input type="text" id="hobby"><br><br>
+        <label for="">Enter Your Gender</label><br>
+        <select name="" id="">
+            <option value="">Male</option>
+            <option value="">Female</option>
+            <option value="">Other</option>
+        </select><br><br>
+        <label for="">Enter Date</label><br>
+        <input type="date" id="date"><br><br>
+        <button type="submit">Submit</button>
+        <br><br>
+        <h4 style="color: red;" id="err"></h4>
+    </form>
+</div>
+</center>
+</body>
+</html>
+<script>
+    document.getElementById("signup").onsubmit=function(event){
+        document.getElementById("err").innerHTML=""
+        event.preventDefault()
+        try{
+        let name=document.getElementById("name").value 
+        let password=document.getElementById("password").value
+        let cp=document.getElementById("cp").value
+        let email=document.getElementById("email").value
+        let hobby=document.getElementById("hobby").value
+        let date=document.getElementById("date").value
+
+
+        if(name===""){
+            throw new Error ("Please Enter Name!")
+        }
+        if(password!==cp){
+            throw new Error ("Password and Confirm Password are not same!")
+        }
+        if(password.length < 8){
+            throw new Error("Password Must be 8 Character!")
+        }
+        if(email==="" || hobby==="" || date===""){
+            throw new Error("Please Enter Required Deatail!")
+        }
+        }
+        catch(err){
+          document.getElementById("err").innerHTML=err.message
+        }
+    }
+</script>
