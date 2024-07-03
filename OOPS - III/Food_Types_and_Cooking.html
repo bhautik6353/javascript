@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class food{
+        cook(name){
+            console.log(this.name)
+        }
+    }
+    class pizza extends food{
+        cook(name){
+            console.log(name + " is Ordered")
+        }
+    }
+    class sushi extends food{
+        cook(name){
+            console.log(name + " is Ordered")
+        }
+    }
+    class burger extends food{
+        cook(name){
+            console.log(name + " is Ordered")
+        }
+    }
+    let a=new pizza()
+    a.cook("Brick Oven Pizza")
+    let b=new sushi()
+    b.cook("Makizushi - Rolled Sushi")
+    let c=new burger()
+    c.cook("Specialty Burger")
+</script>
