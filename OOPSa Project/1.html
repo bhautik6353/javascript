@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let array =[1,2,3,5,8]
+    Array.prototype.multiply=function(el){
+      let multiply=[]
+      for(let i=0;i<this.length;i++){
+        multiply.push(el(this[i]))
+      }
+      return multiply
+    }
+    
+    Array.prototype.even_Num = function (el){
+        let even= []
+        for(let i = 0; i < this.length; i++){
+         if(el(this[i])){
+            even.push(this[i])
+        }
+    }
+    return even
+}
+
+    let ans1=array.even_Num((num)=>{
+        return num%2==0 
+    })
+    let ans=array.multiply((el)=>{
+        return el*2
+    })
+    console.log(ans)
+    console.log(ans1)
+</script>
