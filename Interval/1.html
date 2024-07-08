@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        display: none;
+    }
+</style>
+<body>
+    <center>
+        <div style="width: 100%;height: auto;background-color: #02395a;border-radius: 10px;"><br>
+            <h1  style="color: white;">--Birthaday Counter--</h1>
+        <h1 id="s1" style="color: white;font-size: 40px;"></h1>
+        <img src="https://www.funimada.com/assets/images/cards/big/bday-1313.gif" alt="">
+        <br>
+        </div>
+        <br>
+        
+    </center>
+</body>
+</html>
+<script>
+let index=10
+let stop=setInterval(()=>{
+    index--
+    document.querySelector("#s1").innerHTML=index
+    if(index==0){
+        clearInterval(stop)
+        document.querySelector("img").style.display="block"
+        document.querySelector("#s1").style.display="none"
+    }
+},1000)
+</script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .main{
+        width: 100%;
+        height: auto;
+        background-color: #02395a;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .s1{
+        width: 16%;
+
+    }
+</style>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+   <center>
+    <div class="main">
+        <div class="s1">
+            <center>
+                <br>
+                <i  class="fa-regular fa-user" style="color: #f5f5f5;font-size: 25px;"></i>
+               
+                <h1 id="s1" style="color: white;margin-top: 5px;font-weight:lighter;"></h1>
+                <h3 style="color: white;opacity: 50%;margin-top: -20px;font-weight: lighter;">Students Trained</h3>
+            </center>
+        </div>
+        <div class="s1">
+            <center><br>
+                <i  class="fa-regular fa-building" style="color: #f5f5f5;font-size: 25px;"></i>
+               
+                <h1 id="s2" style="color: white;margin-top: 5px;font-weight:lighter;"></h1>
+                <h3 style="color: white;opacity: 50%;margin-top: -20px;font-weight: lighter;">Branches</h3>
+            </center>
+        </div>
+        <div class="s1">
+            <center><br>
+                <img src="https://www.rnwmultimedia.edu.in/images/certificate.png" alt="" style="height:25px;">
+               
+                <h1 id="s3" style="color: white;margin-top: 5px;font-weight:lighter;"></h1>
+                <h3 style="color: white;opacity: 50%;margin-top: -20px;font-weight: lighter;">Certification</h3>
+            </center>
+        </div>
+        <div class="s1">
+            <center><br>
+                <i  class="fa-regular fa-user" style="color: #f5f5f5;font-size: 25px;"></i>
+               
+                <h1 id="s4" style="color: white;margin-top: 5px;font-weight:lighter;"></h1>
+                <h3 style="color: white;opacity: 50%;margin-top: -20px;font-weight: lighter;">Approved Course</h3>
+            </center>
+        </div>
+        <div class="s1">
+            <center><br>
+                <i  class="fa-regular fa-user" style="color: #f5f5f5;font-size: 25px;"></i>
+               
+                <h1 id="s5" style="color: white;margin-top: 5px;font-weight:lighter;"></h1>
+                <h3 style="color: white;opacity: 50%;margin-top: -20px;font-weight: lighter;">Companies Tie-Ups</h3>
+            </center>
+        </div><br>
+    </div>
+   </center> 
+</body>
+</html>
+<script>
+let index=0;
+let stop=setInterval(()=>{
+    index+=150
+    document.querySelector("#s1").innerHTML=index + "+"
+    if(index===37500){
+        clearInterval(stop)
+    }
+},1)
+let branch=0;
+let branch1=setInterval(()=>{
+    branch+=1
+    document.querySelector("#s2").innerHTML=branch + "+"
+    if(branch===22){
+        clearInterval(branch1)
+    }
+},100)
+let index3=0;
+let stop3=setInterval(()=>{
+    index3+=1
+    document.querySelector("#s3").innerHTML=index3 + "+"
+    if(index3===8){
+        clearInterval(stop3)
+    }
+},100)
+let index4=0;
+let stop4=setInterval(()=>{
+    index4+=1
+    document.querySelector("#s4").innerHTML=index4 + "+"
+    if(index4===50){
+        clearInterval(stop4)
+    }
+},100)
+let index5=0;
+let stop5=setInterval(()=>{
+    index5+=5
+    document.querySelector("#s5").innerHTML=index5 + "+"
+    if(index5===1500){
+        clearInterval(stop5)
+    }
+},1)
+</script>
