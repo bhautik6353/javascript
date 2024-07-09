@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 100%;
+        height: 550px;
+        background-size: cover;
+        background-position: top;
+        display: none;
+        border-radius: 20px;
+    }
+</style>
+
+<body>
+    <center>
+        <img src="https://soliloquywp.com/wp-content/uploads/2013/05/camera-mountains-person-6745-1200x450_c.jpg"
+            alt="">
+        <img src="https://soliloquywp.com/wp-content/uploads/2013/05/action-backlit-beach-1046896-1200x450_c.jpg"
+            alt="">
+        <img src="https://soliloquywp.com/wp-content/uploads/2013/05/action-adult-backlit-433083-1200x450_c.jpg" alt="">
+        <img src="https://soliloquywp.com/wp-content/uploads/2013/05/adults-backlit-beach-950047-1200x450_c.jpg" alt="">
+    </center>
+</body>
+
+</html>
+<script>
+    let photos = document.querySelectorAll("img")
+    let index = 0;
+
+    function slide(index) {
+        for (let i = 0; i < photos.length; i++) {
+            photos[i].style.display = "none";
+        }
+        photos[index].style.display = "block";
+    }
+
+    function show() {
+        setInterval(() => {
+            slide(index)
+            index++;
+            if (index == photos.length) {
+                index = 0;
+            }
+        }, 1000)
+    }
+    show()
+</script>
